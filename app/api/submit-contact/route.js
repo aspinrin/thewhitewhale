@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
-import { verifySolanaTransaction, verifyEthereumTransaction } from '../lib/blockchain'
-import { supabaseAdmin } from '../lib/supabase'
+import { verifySolanaTransaction, verifyEthereumTransaction } from '@/lib/blockchain'
+import { supabaseAdmin } from '@/lib/supabase'
 
 async function sendTelegramNotification(submission) {
   const botToken = process.env.TELEGRAM_BOT_TOKEN
