@@ -19,7 +19,7 @@ export default function AdminPage() {
 
   const handleLogin = () => {
     // Simple password check - replace with Supabase auth in production
-    if (password === 'demo123') {
+    if (password === 'SafetyWhale???1') {
       setAuthenticated(true)
     } else {
       alert('Invalid password')
