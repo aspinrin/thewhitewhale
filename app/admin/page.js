@@ -1,4 +1,9 @@
 'use client'
+useEffect(() => {
+  console.log('Supabase URL:', process.env.NEXT_PUBLIC_SUPABASE_URL)
+  console.log('Anon Key exists:', !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)
+}, [])
+
 
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
