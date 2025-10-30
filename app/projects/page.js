@@ -7,6 +7,14 @@ const projects = [
     category: "DeFi",
     link: "https://app.hyperliquid.xyz/trade"
   },
+  
+  {
+    name: "Drift",
+    description: "The capital-efficient DeFi platform on Solana",
+    category: "Defi",
+    link: "app.drift.trade"
+  },
+  
   {
     name: "DefiTuna",
     description: "Solana's most advanced AMM and advanced LP toolkit.",
@@ -14,29 +22,19 @@ const projects = [
     link: "defituna.com"
   },
   {
-    name: "Marinade",
-    description: "Liquid staking protocol",
-    category: "DeFi",
-    link: "https://marinade.finance"
+    name: "Solfare",
+    description: "Self Custody",
+    category: "Wallet",
+    link: "solflare.com"
   },
+  
   {
-    name: "Raydium",
-    description: "Automated market maker",
-    category: "DeFi",
-    link: "https://raydium.io"
-  },
-  {
-    name: "Phantom",
-    description: "Multi-chain crypto wallet",
+    name: "Rabby Wallet",
+    description: "Your go-to wallet for Ethereum and EVM",
     category: "Infrastructure",
-    link: "https://phantom.app"
+    link: "rabby.io"
   },
-  {
-    name: "Monad",
-    description: "Layer 1 blockchain bringing parallel execution to the EVM || 10,000 TPS",
-    category: "Chain",
-    link: "https://www.monad.xyz/"
-  }
+  
 ]
 
 export default function ProjectsPage() {

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { supabase } from '@/lib/supabase'
+import { supabase } from '../lib/supabase'
 import { CheckCircle, Clock, MessageCircle } from 'lucide-react'
 
 export default function AdminPage() {
