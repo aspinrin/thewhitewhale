@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
-import { verifySolanaTransaction, verifyEthereumTransaction } from '../lib/blockchain'
-import { supabaseAdmin } from '../lib/supabase'
+import { verifySolanaTransaction, verifyEthereumTransaction } from './lib/blockchain'
+import { supabaseAdmin } from './lib/supabase'
 
 export async function POST(request) {
   try {
