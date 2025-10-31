@@ -179,47 +179,42 @@ export default function AdminPage() {
                   <p className="text-sm text-gray-400 mb-1">Telegram: {sub.telegram}</p>
                 )}
 
-                <div className="bg-gray-800 rounded-lg p-4 my-4">
-                  <p className="text-sm text-gray-300 whitespace-pre-wrap">{sub.message}</p>
-                </div>
-
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                  <div className="flex flex-wrap gap-2">
-                    <button
-                      onClick={() => updateStatus(sub.id, 'read')}
-                      className={`px-3 py-1 rounded text-sm ${
-                        sub.status === 'read'
-                          ? 'bg-yellow-600'
-                          : 'bg-gray-700 hover:bg-gray-600'
-                      }`}
-                    >
-                      Mark as Read
-                    </button>
-                    <button
-                      onClick={() => updateStatus(sub.id, 'replied')}
-                      className={`px-3 py-1 rounded text-sm ${
-                        sub.status === 'replied'
-                          ? 'bg-green-600'
-                          : 'bg-gray-700 hover:bg-gray-600'
-                      }`}
-                    >
-                      Mark as Replied
-                    </button>
-                  </div>
-
-                  <a>
-                    href={
-                      sub.chain === 'solana'
-                        ? `https://solscan.io/tx/${sub.tx_hash}`
-                        : `https://etherscan.io/tx/${sub.tx_hash}`
-                    }
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-blue-400 hover:underline"
-                  >
-                    View Transaction
-                  </a>
-                </div>
+  <div className="flex flex-wrap gap-2">
+    <button
+      onClick={() => updateStatus(sub.id, 'read')}
+      className={`px-3 py-1 rounded text-sm ${
+        sub.status === 'read'
+          ? 'bg-yellow-600'
+          : 'bg-gray-700 hover:bg-gray-600'
+      }`}
+    >
+      Mark as Read
+    </button>
+    <button
+      onClick={() => updateStatus(sub.id, 'replied')}
+      className={`px-3 py-1 rounded text-sm ${
+        sub.status === 'replied'
+          ? 'bg-green-600'
+          : 'bg-gray-700 hover:bg-gray-600'
+      }`}
+    >
+      Mark as Replied
+    </button>
+  </div>
+  
+    href={
+      sub.chain === 'solana'
+        ? `https://solscan.io/tx/${sub.tx_hash}`
+        : `https://etherscan.io/tx/${sub.tx_hash}`
+    }
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sm text-blue-400 hover:underline"
+  >
+    View Transaction
+  </a>
+</div>
               </div>
             ))}
           </div>
