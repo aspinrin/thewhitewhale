@@ -1,5 +1,6 @@
 import './globals.css'
 import Navbar from '../components/Navbar'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata = {
   title: 'TheWhiteWhale',
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
         <main className="container mx-auto px-4 py-8">
           {children}
         </main>
+         <Analytics />
       </body>
     </html>
   )
