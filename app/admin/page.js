@@ -207,7 +207,7 @@ export default function AdminPage() {
                     </button>
                   </div>
 
-                  
+                  <a>
                     href={
                       sub.chain === 'solana'
                         ? `https://solscan.io/tx/${sub.tx_hash}`
