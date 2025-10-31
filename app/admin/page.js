@@ -13,12 +13,10 @@ export default function AdminPage() {
   const [error, setError] = useState('')
   const router = useRouter()
 
-  // Check authentication on mount
   useEffect(() => {
     checkAuth()
   }, [])
 
-  // Load submissions when authenticated
   useEffect(() => {
     if (user) {
       loadSubmissions()
@@ -88,7 +86,6 @@ export default function AdminPage() {
     }
   }
 
-  // Show loading while checking auth
   if (loading && !user) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
@@ -97,7 +94,6 @@ export default function AdminPage() {
     )
   }
 
-  // Don't render if not authenticated
   if (!user) {
     return null
   }
@@ -107,7 +103,6 @@ export default function AdminPage() {
   return (
     <div className="min-h-screen bg-black text-white p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-8">
           <div>
             <h1 className="text-3xl md:text-4xl font-bold mb-2">Admin Dashboard</h1>
@@ -134,7 +129,6 @@ export default function AdminPage() {
           </div>
         )}
 
-        {/* Filter Buttons */}
         <div className="flex flex-wrap gap-3 mb-6">
           {['all', 'pending', 'read', 'replied'].map((status) => (
             <button
@@ -151,7 +145,6 @@ export default function AdminPage() {
           ))}
         </div>
 
-        {/* Submissions List */}
         {loading ? (
           <div className="text-center py-20">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
