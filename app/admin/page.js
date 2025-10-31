@@ -61,29 +61,24 @@ export default function AdminPage() {
       const { data, error } = await query
 
       if (error) {
-        console.error('Error loading submissions:', error)
-        setError('Failed to load submissions: ' + error.message)
+        setError('Failed to load submissions')
       } else {
         setSubmissions(data || [])
       }
     } catch (err) {
-      setError('Error: ' + err.message)
+      setError('Error loading data')
     }
 
     setLoading(false)
   }
 
   const updateStatus = async (id, newStatus) => {
-    const { error } = await supabase
+    await supabase
       .from('contact_submissions')
       .update({ status: newStatus })
       .eq('id', id)
 
-    if (!error) {
-      loadSubmissions()
-    } else {
-      alert('Failed to update status: ' + error.message)
-    }
+    loadSubmissions()
   }
 
   if (loading && !user) {
@@ -162,13 +157,8 @@ export default function AdminPage() {
                     <h3 className="text-xl font-bold mb-1">{sub.full_name}</h3>
                     <p className="text-blue-400">@{sub.x_handle}</p>
                   </div>
-                  <div className="md:text-right">
-                    <p className="text-sm text-gray-400">
-                      {new Date(sub.created_at).toLocaleDateString()}
-                    </p>
-                    <p className="text-sm">
-                      {sub.chain === 'solana' ? 'Solana' : 'Ethereum'}
-                    </p>
+                  <div className="text-sm text-gray-400">
+                    {new Date(sub.created_at).toLocaleDateString()}
                   </div>
                 </div>
 
@@ -179,42 +169,36 @@ export default function AdminPage() {
                   <p className="text-sm text-gray-400 mb-1">Telegram: {sub.telegram}</p>
                 )}
 
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-  <div className="flex flex-wrap gap-2">
-    <button
-      onClick={() => updateStatus(sub.id, 'read')}
-      className={`px-3 py-1 rounded text-sm ${
-        sub.status === 'read'
-          ? 'bg-yellow-600'
-          : 'bg-gray-700 hover:bg-gray-600'
-      }`}
-    >
-      Mark as Read
-    </button>
-    <button
-      onClick={() => updateStatus(sub.id, 'replied')}
-      className={`px-3 py-1 rounded text-sm ${
-        sub.status === 'replied'
-          ? 'bg-green-600'
-          : 'bg-gray-700 hover:bg-gray-600'
-      }`}
-    >
-      Mark as Replied
-    </button>
-  </div>
-  
-    href={
-      sub.chain === 'solana'
-        ? `https://solscan.io/tx/${sub.tx_hash}`
-        : `https://etherscan.io/tx/${sub.tx_hash}`
-    }
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-sm text-blue-400 hover:underline"
-  >
-    View Transaction
-  </a>
-</div>
+                <div className="bg-gray-800 rounded-lg p-4 my-4">
+                  <p className="text-sm text-gray-300">{sub.message}</p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button
+                    onClick={() => updateStatus(sub.id, 'read')}
+                    className="px-3 py-1 rounded text-sm bg-yellow-600 hover:bg-yellow-700"
+                  >
+                    Mark Read
+                  </button>
+                  <button
+                    onClick={() => updateStatus(sub.id, 'replied')}
+                    className="px-3 py-1 rounded text-sm bg-green-600 hover:bg-green-700"
+                  >
+                    Mark Replied
+                  </button>
+                  
+                    href={
+                      sub.chain === 'solana'
+                        ? 'https://solscan.io/tx/' + sub.tx_hash
+                        : 'https://etherscan.io/tx/' + sub.tx_hash
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-blue-400 hover:underline"
+                  >
+                    View TX
+                  </a>
+                </div>
               </div>
             ))}
           </div>
