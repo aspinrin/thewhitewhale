@@ -458,8 +458,8 @@ export default function MexcPage() {
       <div className="glass rounded-lg p-8 bg-red-900/20 border-red-500 mb-6">
         <h2 className="text-2xl font-bold mb-4">⚖️ Current Status</h2>
         <div className="space-y-2 text-gray-300">
-          <p><strong className="text-white">Status:</strong> <span className="text-red-400">Ongoing dispute</span></p>
-          <p><strong className="text-white">Assets:</strong> <span className="text-red-400">Still frozen</span></p>
+          <p><strong className="text-white">Status:</strong> <span className="text-red-400">Resolved</span></p>
+          <p><strong className="text-white">Assets:</strong> <span className="text-red-400">Refunded</span></p>
           <p><strong className="text-white">Amount:</strong> <span className="text-yellow-400">$3,158,572.32</span></p>
           
         </div>
