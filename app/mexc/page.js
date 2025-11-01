@@ -436,29 +436,32 @@ export default function MexcPage() {
             </ul>
           </div>
 
-         <div className="bg-red-900/30 border-2 border-red-500 rounded-lg p-6 my-6 text-center">
-  <p className="text-2xl font-bold text-red-400 mb-2">⚠️ Current Status</p>
-  <p className="text-xl text-white">Resolved</p>
-  <p className="text-gray-300 mt-2">
-    <a
-      href="https://solscan.io/tx/3P6uFgiRE6veZpAHidzLHqqx8cEAW6hxR8ZZzZqTmjC2jHBzhMqK1CcGkirSX77wgnKRqywCHraNfvuKHDxeqz4f"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-400 underline hover:text-blue-300"
-    >
-      Refunded Tx here
-    </a>
-  </p>
-</div>
+          <div className="bg-red-900/30 border-2 border-red-500 rounded-lg p-6 my-6 text-center">
+            <p className="text-2xl font-bold text-red-400 mb-2">⚠️ Current Status</p>
+            <p className="text-xl text-white">Resolved </p>
+            <p className="text-gray-300 mt-2">
+  <a
+    href="https://solscan.io/tx/3P6uFgiRE6veZpAHidzLHqqx8cEAW6hxR8ZZzZqTmjC2jHBzhMqK1CcGkirSX77wgnKRqywCHraNfvuKHDxeqz4f"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-400 underline hover:text-blue-300"
+  >
+    Refunded Tx here
+  </a>
+</p>
 
-    
+          </div>
+
+        </div>
+      </div>
 
       <div className="glass rounded-lg p-8 bg-red-900/20 border-red-500 mb-6">
         <h2 className="text-2xl font-bold mb-4">⚖️ Current Status</h2>
         <div className="space-y-2 text-gray-300">
-          <p><strong className="text-white">Status:</strong> <span className="text-red-400">Solved</span></p>
-          <p><strong className="text-white">Assets:</strong> <span className="text-red-400">Fund Released</span></p>
+          <p><strong className="text-white">Status:</strong> <span className="text-red-400">Ongoing dispute</span></p>
+          <p><strong className="text-white">Assets:</strong> <span className="text-red-400">Still frozen</span></p>
           <p><strong className="text-white">Amount:</strong> <span className="text-yellow-400">$3,158,572.32</span></p>
+          
         </div>
       </div>
 
