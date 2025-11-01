@@ -436,13 +436,21 @@ export default function MexcPage() {
             </ul>
           </div>
 
-          <div className="bg-red-900/30 border-2 border-red-500 rounded-lg p-6 my-6 text-center">
-            <p className="text-2xl font-bold text-red-400 mb-2">⚠️ Current Status</p>
-            <p className="text-xl text-white">Resolved </p>
-            <p className="text-gray-300 mt-2">https://solscan.io/tx/3P6uFgiRE6veZpAHidzLHqqx8cEAW6hxR8ZZzZqTmjC2jHBzhMqK1CcGkirSX77wgnKRqywCHraNfvuKHDxeqz4f</p>
-          </div>
+         <div className="bg-red-900/30 border-2 border-red-500 rounded-lg p-6 my-6 text-center">
+  <p className="text-2xl font-bold text-red-400 mb-2">⚠️ Current Status</p>
+  <p className="text-xl text-white">Resolved</p>
+  <p className="text-gray-300 mt-2">
+    <a
+      href="https://solscan.io/tx/3P6uFgiRE6veZpAHidzLHqqx8cEAW6hxR8ZZzZqTmjC2jHBzhMqK1CcGkirSX77wgnKRqywCHraNfvuKHDxeqz4f"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-400 underline hover:text-blue-300"
+    >
+      Refunded Tx here
+    </a>
+  </p>
+</div>
 
-        </div>
       </div>
 
       <div className="glass rounded-lg p-8 bg-red-900/20 border-red-500 mb-6">
