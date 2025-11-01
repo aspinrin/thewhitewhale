@@ -451,7 +451,7 @@ export default function MexcPage() {
   </p>
 </div>
 
-      </div>
+    
 
       <div className="glass rounded-lg p-8 bg-red-900/20 border-red-500 mb-6">
         <h2 className="text-2xl font-bold mb-4">⚖️ Current Status</h2>
