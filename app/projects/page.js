@@ -25,7 +25,7 @@ const projects = [
     name: "TOSHI",
     description: "memecoin on Base named after Coinbase co-founder Brian Armstrong's cat",
     category: "Meme",
-    link: "toshithecat.com"
+    link: "https://www.toshithecat.com"
   },
   {
     name: "Solfare",
