@@ -22,6 +22,12 @@ const projects = [
     link: "defituna.com"
   },
   {
+    name: "TOSHI",
+    description: "memecoin on Base named after Coinbase co-founder Brian Armstrong's cat",
+    category: "Meme",
+    link: "toshithecat.com"
+  },
+  {
     name: "Solfare",
     description: "Self Custody",
     category: "Wallet",
