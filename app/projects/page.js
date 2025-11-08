@@ -37,10 +37,16 @@ const projects = [
   {
     name: "Rabby Wallet",
     description: "Your go-to wallet for Ethereum and EVM",
-    category: "Infrastructure",
+    category: "Wallet",
     link: "rabby.io"
   },
   
+  {
+    name: "Wasabi Protocol",
+    description: "Trading app with native yield",
+    category: "Trading",
+    link: "wasabi.xyz"
+  },
 ]
 
 export default function ProjectsPage() {
