@@ -55,7 +55,9 @@ export default function ContactPage() {
               <p className="text-gray-300 mb-4">
                 For immediate inquiries, connect with TheWhiteWhale on X:
               </p>
-              
+
+              {/* ✅ Fixed missing <a> tag */}
+              <a
                 href="https://x.com/TheWhiteWhaleV2"
                 target="_blank"
                 rel="noopener noreferrer"
