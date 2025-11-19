@@ -2,17 +2,17 @@
 
 const projects = [
   {
-    name: "Hyperliquid",
-    description: "Leading DEX Trading Platform",
-    category: "DeFi",
-    link: "https://app.hyperliquid.xyz/trade"
-  },
-  
-  {
     name: "Drift",
     description: "The capital-efficient DeFi platform on Solana",
     category: "Defi",
     link: "app.drift.trade"
+  },
+  
+  {
+    name: "Hyperliquid",
+    description: "Leading DEX Trading Platform",
+    category: "DeFi",
+    link: "https://app.hyperliquid.xyz/trade"
   },
   
   {
@@ -46,6 +46,20 @@ const projects = [
     description: "Trading app with native yield",
     category: "Trading",
     link: "wasabi.xyz"
+  },
+  
+  {
+    name: "Aave",
+    description: "The most trusted financial network.  Earn, borrow, save, and swap",
+    category: "Lend",
+    link: "aave.com"
+  },
+  
+  {
+    name: "Adrena",
+    description: "Solana Perps DEX. 100x Leverage. 0% Slippage. 90% Rev Share. Open Source. Community Owned",
+    category: "Perps Dex",
+    link: "adrena.trade"
   },
 ]
 

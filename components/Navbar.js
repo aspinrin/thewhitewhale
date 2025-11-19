@@ -15,6 +15,7 @@ export default function Navbar() {
     { href: '/mexc', label: 'Mexc Issue' },
     { href: '/projects', label: 'Projects' },
     { href: '/prices', label: 'Live Prices' },
+    { href: '/charity', label: 'Charity' },
   ]
 
   const isActive = (href) => pathname === href
