@@ -21,24 +21,19 @@ const projects = [
     category: "DeFi",
     link: "defituna.com"
   },
+  
   {
     name: "TOSHI",
     description: "memecoin on Base named after Coinbase co-founder Brian Armstrong's cat",
     category: "Meme",
     link: "https://www.toshithecat.com"
   },
-  {
-    name: "Solfare",
-    description: "Self Custody",
-    category: "Wallet",
-    link: "solflare.com"
-  },
   
   {
-    name: "Rabby Wallet",
-    description: "Your go-to wallet for Ethereum and EVM",
-    category: "Wallet",
-    link: "rabby.io"
+    name: "Pudgy Penguins",
+    description: "Face of crypto 🐧",
+    category: "Meme",
+    link: "pengu.pudgypenguins.com"
   },
   
   {
@@ -53,6 +48,20 @@ const projects = [
     description: "The most trusted financial network.  Earn, borrow, save, and swap",
     category: "Lend",
     link: "aave.com"
+  },
+  
+  {
+    name: "Solfare",
+    description: "Self Custody",
+    category: "Wallet",
+    link: "solflare.com"
+  },
+  
+  {
+    name: "Rabby Wallet",
+    description: "Your go-to wallet for Ethereum and EVM",
+    category: "Wallet",
+    link: "rabby.io"
   },
   
   {
