@@ -70,6 +70,20 @@ const projects = [
     category: "Perps Dex",
     link: "adrena.trade"
   },
+  
+ {
+    name: "Arculus",
+    description: "Arculus® is a digital security platform that unlocks simple and sleek digital asset protection for all",
+    category: "HardWallet",
+    link: "https://www.getarculus.com"
+  },
+  
+  {
+    name: "The White Whale",
+    description: "The White Whale meme was not created by me,I took it over to control use of image/likeness/reputation,I make zero money from this",
+    category: "Meme",
+    link: "https://app.streamflow.finance/contract/solana/mainnet/99xdeYSozFmUAnpQqYgh2Xx94kEkoyKSoPHALvnfnKT1"
+  },
 ]
 
 export default function ProjectsPage() {
