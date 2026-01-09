@@ -1,6 +1,14 @@
 'use client'
 
 const projects = [
+
+{
+    name: "The White Whale Meme Official",
+    description: "The official $WhiteWhale meme 🐋",
+    category: "Meme",
+    link: "whitewhalememe.com"
+  },
+
   {
     name: "Drift",
     description: "The capital-efficient DeFi platform on Solana",
@@ -79,10 +87,10 @@ const projects = [
   },
   
   {
-    name: "The White Whale",
-    description: "The White Whale meme was not created by me,I took it over to control use of image/likeness/reputation,I make zero money from this",
-    category: "Meme",
-    link: "https://app.streamflow.finance/contract/solana/mainnet/99xdeYSozFmUAnpQqYgh2Xx94kEkoyKSoPHALvnfnKT1"
+    name: "CLOBr | Liquidity Intelligence",
+    description: "X-Ray vision for traders using Solana liquidity data from Meteora, Jupiter, and more.",
+    category: "Setup",
+    link: "clobr.io"
   },
 ]
 
@@ -91,7 +99,7 @@ export default function ProjectsPage() {
     <div className="max-w-6xl mx-auto">
       <h1 className="text-4xl font-bold mb-4">Featured Projects</h1>
       <p className="text-gray-400 mb-8">
-        Key projects in the Solana ecosystem backed or followed by TheWhiteWhale
+        Key projects in the ecosystem backed or followed by TheWhiteWhale
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
