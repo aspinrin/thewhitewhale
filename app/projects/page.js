@@ -87,10 +87,38 @@ const projects = [
   },
   
   {
+    name: "Mullvad.net",
+    description: "A fast, trustworthy, and easy-to-use VPN is a good first step toward reclaiming your privacy.",
+    category: "VPN",
+    link: "Mullvad.net"
+  },
+  
+  {
     name: "CLOBr | Liquidity Intelligence",
     description: "X-Ray vision for traders using Solana liquidity data from Meteora, Jupiter, and more.",
     category: "Setup",
     link: "clobr.io"
+  },
+  
+  {
+    name: "Slush (💳 Arc)",
+    description: "Your money. Unstuck. Earn, swap & explore on @SuiNetwork.",
+    category: "Wallet",
+    link: "https://slush.app/"
+  },
+  
+  {
+    name: "Phoenix",
+    description: "Solana’s on-chain perpetuals exchange. Live in private beta.",
+    category: "Perp Exchange",
+    link: "phoenix.trade"
+  },
+  
+  {
+    name: "HyperTracker",
+    description: "Hyperliquid wallets.Cohorts. Positions. Order flow. Liquidations. Analytics via dashboard + API.",
+    category: "Tracker",
+    link: "hypertracker.io/x"
   },
 ]
 
