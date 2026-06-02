@@ -1,21 +1,31 @@
 import './globals.css'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import BouncingWhale from '../components/BouncingWhale'
 import { Analytics } from '@vercel/analytics/next'
+import { Outfit } from 'next/font/google'
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
-  title: 'TheWhiteWhale',
-  description: 'Official contact portal for TheWhiteWhale',
+  title: 'TheWhiteWhale | Premium Crypto Insights',
+  description: 'Official portal for TheWhiteWhale',
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="bg-black text-white min-h-screen">
+    <html lang="en" className={outfit.className}>
+      <body className="bg-black text-white min-h-screen flex flex-col">
         <Navbar />
-        <main className="container mx-auto px-4 py-8">
+        <main className="container mx-auto px-4 py-8 flex-grow">
           {children}
         </main>
-         <Analytics />
+        <Footer />
+        <BouncingWhale />
+        <Analytics />
       </body>
     </html>
   )

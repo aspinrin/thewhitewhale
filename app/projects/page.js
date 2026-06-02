@@ -1,175 +1,196 @@
 'use client'
 
-const projects = [
+import { useState } from 'react'
 
+const projects = [
   {
     name: "Hyperliquid",
-    description: "Leading DEX Trading Platform",
-    category: "DeFi",
+    description: "Leading DEX Trading Platform for perpetuals and spot markets.",
+    category: "Perps",
     link: "https://app.hyperliquid.xyz/trade"
   },
-  
   {
     name: "Pacifica",
-    description: "Building the next generation of perp exchanges",
-    category: "Perp Exchange",
+    description: "Building the next generation of perp exchanges.",
+    category: "Perps",
     link: "https://pacifica.fi"
   },
-  
   {
     name: "DefiTuna",
     description: "Solana's most advanced AMM and advanced LP toolkit.",
     category: "DeFi",
-    link: "defituna.com"
+    link: "https://defituna.com"
   },
-  
   {
     name: "Drift",
-    description: "The capital-efficient DeFi platform on Solana",
-    category: "Defi",
-    link: "app.drift.trade"
+    description: "The capital-efficient DeFi platform on Solana.",
+    category: "Perps",
+    link: "https://app.drift.trade"
   },
-  
   {
     name: "TOSHI",
-    description: "memecoin on Base named after Coinbase co-founder Brian Armstrong's cat",
+    description: "Memecoin on Base named after Coinbase co-founder Brian Armstrong's cat.",
     category: "Meme",
     link: "https://www.toshithecat.com"
   },
-  
   {
     name: "Pudgy Penguins",
-    description: "Face of crypto 🐧",
+    description: "The adorable, community-focused face of Web3 NFTs and culture 🐧",
     category: "Meme",
-    link: "pengu.pudgypenguins.com"
+    link: "https://pengu.pudgypenguins.com"
   },
-  
   {
     name: "Wasabi Protocol",
-    description: "Trading app with native yield",
-    category: "Trading",
-    link: "wasabi.xyz"
+    description: "Asset-backed trading app with native yield mechanisms.",
+    category: "DeFi",
+    link: "https://wasabi.xyz"
   },
-  
   {
     name: "Aave",
-    description: "The most trusted financial network.  Earn, borrow, save, and swap",
-    category: "Lend",
-    link: "aave.com"
+    description: "The most trusted financial lending network. Earn, borrow, save, and swap.",
+    category: "DeFi",
+    link: "https://aave.com"
   },
-  
   {
-    name: "Solfare",
-    description: "Self Custody",
-    category: "Wallet",
-    link: "solflare.com"
+    name: "Solflare",
+    description: "Safe and powerful self-custody wallet built specifically for Solana.",
+    category: "Wallets",
+    link: "https://solflare.com"
   },
-  
   {
     name: "Rabby Wallet",
-    description: "Your go-to wallet for Ethereum and EVM",
-    category: "Wallet",
-    link: "rabby.io"
+    description: "The game-changing browser wallet for Ethereum and all EVM chains.",
+    category: "Wallets",
+    link: "https://rabby.io"
   },
-  
   {
     name: "Adrena",
-    description: "Solana Perps DEX. 100x Leverage. 0% Slippage. 90% Rev Share. Open Source. Community Owned",
-    category: "Perps Dex",
-    link: "adrena.trade"
+    description: "Solana Perps DEX. 100x Leverage, 0% Slippage, and 90% Rev Share. Community Owned.",
+    category: "Perps",
+    link: "https://adrena.trade"
   },
-  
- {
+  {
     name: "Arculus",
-    description: "Arculus® is a digital security platform that unlocks simple and sleek digital asset protection for all",
-    category: "HardWallet",
+    description: "Arculus® hardware security platform for simple and sleek digital asset protection.",
+    category: "Wallets",
     link: "https://www.getarculus.com"
   },
-  
   {
-    name: "Mullvad.net",
-    description: "A fast, trustworthy, and easy-to-use VPN is a good first step toward reclaiming your privacy.",
-    category: "VPN",
-    link: "Mullvad.net"
+    name: "Mullvad VPN",
+    description: "A fast, trustworthy, and open-source VPN focused on reclaiming privacy.",
+    category: "Tools",
+    link: "https://mullvad.net"
   },
-  
   {
     name: "CLOBr | Liquidity Intelligence",
-    description: "X-Ray vision for traders using Solana liquidity data from Meteora, Jupiter, and more.",
-    category: "Setup",
-    link: "clobr.io"
+    description: "X-Ray vision for traders using Solana liquidity data from Meteora and Jupiter.",
+    category: "Tools",
+    link: "https://clobr.io"
   },
-  
   {
     name: "Slush (💳 Arc)",
-    description: "Your money. Unstuck. Earn, swap & explore on @SuiNetwork.",
-    category: "Wallet",
+    description: "Earn, swap & explore on Sui Network with a fluid browser wallet extension.",
+    category: "Wallets",
     link: "https://slush.app/"
   },
-  
   {
     name: "Phoenix",
-    description: "Solana’s on-chain perpetuals exchange. Live in private beta.",
-    category: "Perp Exchange",
-    link: "phoenix.trade"
+    description: "Solana’s limit order book perpetuals exchange built for extreme performance.",
+    category: "Perps",
+    link: "https://phoenix.trade"
   },
-  
   {
     name: "HyperTracker",
-    description: "Hyperliquid wallets.Cohorts. Positions. Order flow. Liquidations. Analytics via dashboard + API.",
-    category: "Tracker",
-    link: "hypertracker.io/x"
+    description: "Track Hyperliquid wallets, positions, order flow, liquidations, and cohorts.",
+    category: "Tools",
+    link: "https://hypertracker.io/x"
   },
-  
   {
     name: "The White Whale Meme Official",
-    description: "The official $WhiteWhale meme 🐋",
+    description: "The official $WhiteWhale meme community 🐋",
     category: "Meme",
-    link: "whitewhalememe.com"
-  },
+    link: "https://whitewhalememe.com"
+  }
 ]
 
-export default function ProjectsPage() {
-  return (
-    <div className="max-w-6xl mx-auto">
-      <h1 className="text-4xl font-bold mb-4">Featured Projects</h1>
-      <p className="text-gray-400 mb-8">
-        Key projects in the ecosystem backed or followed by TheWhiteWhale
-      </p>
+const CATEGORIES = ["All", "DeFi", "Perps", "Wallets", "Meme", "Tools"]
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project, index) => (
+export default function ProjectsPage() {
+  const [selectedCategory, setSelectedCategory] = useState("All")
+
+  const filteredProjects = selectedCategory === "All"
+    ? projects
+    : projects.filter(p => p.category === selectedCategory)
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      {/* Title */}
+      <div className="text-center mb-10">
+        <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-450 to-indigo-500 bg-clip-text text-transparent">
+          Featured Ecosystem Projects
+        </h1>
+        <p className="text-gray-405 text-lg">
+          Key protocols, wallets, and community-driven projects followed or backed by TheWhiteWhale
+        </p>
+      </div>
+
+      {/* Filter Buttons */}
+      <div className="flex flex-wrap justify-center gap-2 mb-10">
+        {CATEGORIES.map(category => (
+          <button
+            key={category}
+            onClick={() => setSelectedCategory(category)}
+            className={`px-5 py-2.5 rounded-xl font-medium transition-all duration-200 border text-sm ${
+              selectedCategory === category
+                ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-500/20'
+                : 'bg-gray-900/50 border-gray-800 hover:border-gray-700 text-gray-450 hover:text-white'
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      {/* Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {filteredProjects.map((project, index) => (
           <a
             key={index}
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass rounded-lg p-6 hover:border-blue-500 transition-all group"
+            className="glass rounded-2xl p-6 hover:border-blue-500/50 hover:bg-gray-900/20 transition-all duration-300 group flex flex-col justify-between"
           >
-            <div className="flex items-center justify-between mb-3">
-              <h3 className="text-xl font-bold group-hover:text-blue-400 transition-colors">
-                {project.name}
-              </h3>
-              <span className="text-2xl">↗</span>
+            <div>
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-xl font-bold group-hover:text-blue-400 transition-colors">
+                  {project.name}
+                </h3>
+                <span className="text-gray-500 group-hover:text-blue-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 text-lg">
+                  ↗
+                </span>
+              </div>
+              
+              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                {project.description}
+              </p>
             </div>
-            
-            <p className="text-gray-400 text-sm mb-4">
-              {project.description}
-            </p>
 
-            <div className="inline-block px-3 py-1 bg-blue-900/30 text-blue-400 text-xs rounded-full">
-              {project.category}
+            <div>
+              <span className="inline-block px-3 py-1 bg-blue-950/40 text-blue-400 border border-blue-900/30 text-xs font-medium rounded-lg">
+                {project.category}
+              </span>
             </div>
           </a>
         ))}
       </div>
 
-      <div className="glass rounded-lg p-6 mt-8">
-        <h2 className="text-xl font-bold mb-4">About These Projects</h2>
-        <p className="text-gray-400">
-          These represent some of the strongest builders in the Solana ecosystem. 
-          Each project demonstrates technical excellence, community alignment, and 
-          sustainable business models.
+      {/* Bottom Info Section */}
+      <div className="glass rounded-2xl p-8 border border-gray-800 bg-gradient-to-r from-gray-950 to-gray-900/50">
+        <h2 className="text-xl font-bold mb-3 text-white">Why These Projects?</h2>
+        <p className="text-gray-400 leading-relaxed text-sm">
+          These projects represent some of the strongest innovation and team structures across Solana and the broader EVM ecosystems. 
+          Each represents clean execution, community-first alignment, and clear product-market fit.
         </p>
       </div>
     </div>

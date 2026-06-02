@@ -11,7 +11,6 @@ export default function Navbar() {
   
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/contact', label: 'Contact' },
     { href: '/mexc', label: 'Mexc Issue' },
     { href: '/projects', label: 'Projects' },
     { href: '/prices', label: 'Live Prices' },
@@ -25,12 +24,22 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <img src="/logo.png" alt="TheWhiteWhale" className="h-10 w-10" />
-            <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-              TheWhiteWhale
-            </span>
-          </Link>
+          <div 
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                window.dispatchEvent(new CustomEvent('toggle-whale'))
+              }
+            }}
+            className="cursor-pointer select-none"
+            title="Summon Bouncing Whale! 🐋"
+          >
+            <Link href="/" className="flex items-center gap-3">
+              <span className="text-2xl hover:scale-125 transition-transform duration-200 block">🐋</span>
+              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                TheWhiteWhale
+              </span>
+            </Link>
+          </div>
           
           {/* Desktop Navigation - Hidden on Mobile */}
           <div className="hidden md:flex gap-6">
