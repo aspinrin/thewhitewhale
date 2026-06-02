@@ -2,20 +2,6 @@
 
 const projects = [
 
-{
-    name: "The White Whale Meme Official",
-    description: "The official $WhiteWhale meme 🐋",
-    category: "Meme",
-    link: "whitewhalememe.com"
-  },
-
-  {
-    name: "Drift",
-    description: "The capital-efficient DeFi platform on Solana",
-    category: "Defi",
-    link: "app.drift.trade"
-  },
-  
   {
     name: "Hyperliquid",
     description: "Leading DEX Trading Platform",
@@ -24,10 +10,24 @@ const projects = [
   },
   
   {
+    name: "Pacifica",
+    description: "Building the next generation of perp exchanges",
+    category: "Perp Exchange",
+    link: "https://pacifica.fi"
+  },
+  
+  {
     name: "DefiTuna",
     description: "Solana's most advanced AMM and advanced LP toolkit.",
     category: "DeFi",
     link: "defituna.com"
+  },
+  
+  {
+    name: "Drift",
+    description: "The capital-efficient DeFi platform on Solana",
+    category: "Defi",
+    link: "app.drift.trade"
   },
   
   {
@@ -119,6 +119,13 @@ const projects = [
     description: "Hyperliquid wallets.Cohorts. Positions. Order flow. Liquidations. Analytics via dashboard + API.",
     category: "Tracker",
     link: "hypertracker.io/x"
+  },
+  
+  {
+    name: "The White Whale Meme Official",
+    description: "The official $WhiteWhale meme 🐋",
+    category: "Meme",
+    link: "whitewhalememe.com"
   },
 ]
 
