@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Home() {
   const stats = [
     { label: "PnL Target", value: "$100M 🎯" },
-    { label: "Community", value: "24,000+ 🐋" },
+    { label: "Community", value: "97.6K 🐋" },
     { label: "Charity Donated", value: "$1.5M+ 💚" },
     { label: "Dispute Status", value: "Refunded ⚖️" }
   ]
