@@ -15,7 +15,7 @@ const projects = [
     description: "Building the next generation of perp exchanges.",
     category: "Perps",
     link: "https://pacifica.fi",
-    twitter: "https://x.com/PacificaFi"
+    twitter: "https://x.com/pacifica_fi"
   },
   {
     name: "DefiTuna",
@@ -91,8 +91,7 @@ const projects = [
     name: "Mullvad VPN",
     description: "A fast, trustworthy, and open-source VPN focused on reclaiming privacy.",
     category: "Tools",
-    link: "https://mullvad.net",
-    twitter: "https://x.com/mullvadnet"
+    link: "https://mullvad.net"
   },
   {
     name: "CLOBr | Liquidity Intelligence",
@@ -106,7 +105,7 @@ const projects = [
     description: "Earn, swap & explore on Sui Network with a fluid browser wallet extension.",
     category: "Wallets",
     link: "https://slush.app/",
-    twitter: "https://x.com/slush_app"
+    twitter: "https://x.com/SlushWallet"
   },
   {
     name: "Phoenix",
