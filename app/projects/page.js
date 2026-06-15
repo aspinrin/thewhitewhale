@@ -4,129 +4,112 @@ import { useState } from 'react'
 
 const projects = [
   {
-    name: "Hyperliquid",
-    description: "Leading DEX Trading Platform for perpetuals and spot markets.",
+    name: "The White Whale Meme Official",
+    description: "The official $WhiteWhale meme 🐋",
+    category: "Meme",
+    link: "https://whitewhalememe.com"
+  },
+  {
+    name: "Drift",
+    description: "The capital-efficient DeFi platform on Solana",
     category: "Perps",
-    link: "https://app.hyperliquid.xyz/trade",
-    twitter: "https://x.com/HyperliquidX"
+    link: "https://app.drift.trade"
+  },
+  {
+    name: "Hyperliquid",
+    description: "Leading DEX Trading Platform",
+    category: "Perps",
+    link: "https://app.hyperliquid.xyz/trade"
   },
   {
     name: "Pacifica",
-    description: "Building the next generation of perp exchanges.",
+    description: "Building the next generation of perp exchanges",
     category: "Perps",
-    link: "https://pacifica.fi",
-    twitter: "https://x.com/pacifica_fi"
+    link: "https://pacifica.fi"
   },
   {
     name: "DefiTuna",
     description: "Solana's most advanced AMM and advanced LP toolkit.",
     category: "DeFi",
-    link: "https://defituna.com",
-    twitter: "https://x.com/defituna"
-  },
-  {
-    name: "Drift",
-    description: "The capital-efficient DeFi platform on Solana.",
-    category: "Perps",
-    link: "https://app.drift.trade",
-    twitter: "https://x.com/DriftProtocol"
+    link: "https://defituna.com"
   },
   {
     name: "TOSHI",
-    description: "Memecoin on Base named after Coinbase co-founder Brian Armstrong's cat.",
+    description: "memecoin on Base named after Coinbase co-founder Brian Armstrong's cat",
     category: "Meme",
-    link: "https://www.toshithecat.com",
-    twitter: "https://x.com/Toshi_base"
+    link: "https://www.toshithecat.com"
   },
   {
     name: "Pudgy Penguins",
-    description: "The adorable, community-focused face of Web3 NFTs and culture 🐧",
+    description: "Face of crypto 🐧",
     category: "Meme",
-    link: "https://pengu.pudgypenguins.com",
-    twitter: "https://x.com/pudgypenguins"
+    link: "https://pengu.pudgypenguins.com"
   },
   {
     name: "Wasabi Protocol",
-    description: "Asset-backed trading app with native yield mechanisms.",
+    description: "Trading app with native yield",
     category: "DeFi",
-    link: "https://wasabi.xyz",
-    twitter: "https://x.com/wasabi_protocol"
+    link: "https://wasabi.xyz"
   },
   {
     name: "Aave",
-    description: "The most trusted financial lending network. Earn, borrow, save, and swap.",
+    description: "The most trusted financial network.  Earn, borrow, save, and swap",
     category: "DeFi",
-    link: "https://aave.com",
-    twitter: "https://x.com/Aave"
+    link: "https://aave.com"
   },
   {
-    name: "Solflare",
-    description: "Safe and powerful self-custody wallet built specifically for Solana.",
+    name: "Solfare",
+    description: "Self Custody",
     category: "Wallets",
-    link: "https://solflare.com",
-    twitter: "https://x.com/solflare_wallet"
+    link: "https://solflare.com"
   },
   {
     name: "Rabby Wallet",
-    description: "The game-changing browser wallet for Ethereum and all EVM chains.",
+    description: "Your go-to wallet for Ethereum and EVM",
     category: "Wallets",
-    link: "https://rabby.io",
-    twitter: "https://x.com/Rabby_Wallet"
+    link: "https://rabby.io"
   },
   {
     name: "Adrena",
-    description: "Solana Perps DEX. 100x Leverage, 0% Slippage, and 90% Rev Share. Community Owned.",
+    description: "Solana Perps DEX. 100x Leverage. 0% Slippage. 90% Rev Share. Open Source. Community Owned",
     category: "Perps",
-    link: "https://adrena.trade",
-    twitter: "https://x.com/AdrenaProtocol"
+    link: "https://adrena.trade"
   },
   {
     name: "Arculus",
-    description: "Arculus® hardware security platform for simple and sleek digital asset protection.",
+    description: "Arculus® is a digital security platform that unlocks simple and sleek digital asset protection for all",
     category: "Wallets",
-    link: "https://www.getarculus.com",
-    twitter: "https://x.com/ArculusWallet"
+    link: "https://www.getarculus.com"
   },
   {
-    name: "Mullvad VPN",
-    description: "A fast, trustworthy, and open-source VPN focused on reclaiming privacy.",
+    name: "Mullvad.net",
+    description: "A fast, trustworthy, and easy-to-use VPN is a good first step toward reclaiming your privacy.",
     category: "Tools",
     link: "https://mullvad.net"
   },
   {
     name: "CLOBr | Liquidity Intelligence",
-    description: "X-Ray vision for traders using Solana liquidity data from Meteora and Jupiter.",
+    description: "X-Ray vision for traders using Solana liquidity data from Meteora, Jupiter, and more.",
     category: "Tools",
-    link: "https://clobr.io",
-    twitter: "https://x.com/clobr_io"
+    link: "https://clobr.io"
   },
   {
     name: "Slush (💳 Arc)",
-    description: "Earn, swap & explore on Sui Network with a fluid browser wallet extension.",
+    description: "Your money. Unstuck. Earn, swap & explore on @SuiNetwork.",
     category: "Wallets",
-    link: "https://slush.app/",
-    twitter: "https://x.com/SlushWallet"
+    link: "https://slush.app/"
   },
   {
     name: "Phoenix",
-    description: "Solana’s limit order book perpetuals exchange built for extreme performance.",
+    description: "Solana’s on-chain perpetuals exchange. Live in private beta.",
     category: "Perps",
-    link: "https://phoenix.trade",
-    twitter: "https://x.com/PhoenixTrade"
+    link: "https://phoenix.trade"
   },
   {
     name: "HyperTracker",
-    description: "Track Hyperliquid wallets, positions, order flow, liquidations, and cohorts.",
+    description: "Hyperliquid wallets.Cohorts. Positions. Order flow. Liquidations. Analytics via dashboard + API.",
     category: "Tools",
-    link: "https://hypertracker.io/x",
-    twitter: "https://x.com/hypertracker_io"
-  },
-  {
-    name: "The White Whale Meme Official",
-    description: "The official $WhiteWhale meme community 🐋",
-    category: "Meme",
-    link: "https://whitewhalememe.com",
-    twitter: "https://x.com/WhiteWhaleLabs"
+    link: "https://hypertracker.io/x"
   },
   {
     name: "Zinc",
