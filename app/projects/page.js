@@ -7,109 +7,127 @@ const projects = [
     name: "Hyperliquid",
     description: "Leading DEX Trading Platform for perpetuals and spot markets.",
     category: "Perps",
-    link: "https://app.hyperliquid.xyz/trade"
+    link: "https://app.hyperliquid.xyz/trade",
+    twitter: "https://x.com/HyperliquidX"
   },
   {
     name: "Pacifica",
     description: "Building the next generation of perp exchanges.",
     category: "Perps",
-    link: "https://pacifica.fi"
+    link: "https://pacifica.fi",
+    twitter: "https://x.com/PacificaFi"
   },
   {
     name: "DefiTuna",
     description: "Solana's most advanced AMM and advanced LP toolkit.",
     category: "DeFi",
-    link: "https://defituna.com"
+    link: "https://defituna.com",
+    twitter: "https://x.com/defituna"
   },
   {
     name: "Drift",
     description: "The capital-efficient DeFi platform on Solana.",
     category: "Perps",
-    link: "https://app.drift.trade"
+    link: "https://app.drift.trade",
+    twitter: "https://x.com/DriftProtocol"
   },
   {
     name: "TOSHI",
     description: "Memecoin on Base named after Coinbase co-founder Brian Armstrong's cat.",
     category: "Meme",
-    link: "https://www.toshithecat.com"
+    link: "https://www.toshithecat.com",
+    twitter: "https://x.com/Toshi_base"
   },
   {
     name: "Pudgy Penguins",
     description: "The adorable, community-focused face of Web3 NFTs and culture 🐧",
     category: "Meme",
-    link: "https://pengu.pudgypenguins.com"
+    link: "https://pengu.pudgypenguins.com",
+    twitter: "https://x.com/pudgypenguins"
   },
   {
     name: "Wasabi Protocol",
     description: "Asset-backed trading app with native yield mechanisms.",
     category: "DeFi",
-    link: "https://wasabi.xyz"
+    link: "https://wasabi.xyz",
+    twitter: "https://x.com/wasabi_protocol"
   },
   {
     name: "Aave",
     description: "The most trusted financial lending network. Earn, borrow, save, and swap.",
     category: "DeFi",
-    link: "https://aave.com"
+    link: "https://aave.com",
+    twitter: "https://x.com/Aave"
   },
   {
     name: "Solflare",
     description: "Safe and powerful self-custody wallet built specifically for Solana.",
     category: "Wallets",
-    link: "https://solflare.com"
+    link: "https://solflare.com",
+    twitter: "https://x.com/solflare_wallet"
   },
   {
     name: "Rabby Wallet",
     description: "The game-changing browser wallet for Ethereum and all EVM chains.",
     category: "Wallets",
-    link: "https://rabby.io"
+    link: "https://rabby.io",
+    twitter: "https://x.com/Rabby_Wallet"
   },
   {
     name: "Adrena",
     description: "Solana Perps DEX. 100x Leverage, 0% Slippage, and 90% Rev Share. Community Owned.",
     category: "Perps",
-    link: "https://adrena.trade"
+    link: "https://adrena.trade",
+    twitter: "https://x.com/AdrenaProtocol"
   },
   {
     name: "Arculus",
     description: "Arculus® hardware security platform for simple and sleek digital asset protection.",
     category: "Wallets",
-    link: "https://www.getarculus.com"
+    link: "https://www.getarculus.com",
+    twitter: "https://x.com/ArculusWallet"
   },
   {
     name: "Mullvad VPN",
     description: "A fast, trustworthy, and open-source VPN focused on reclaiming privacy.",
     category: "Tools",
-    link: "https://mullvad.net"
+    link: "https://mullvad.net",
+    twitter: "https://x.com/mullvadnet"
   },
   {
     name: "CLOBr | Liquidity Intelligence",
     description: "X-Ray vision for traders using Solana liquidity data from Meteora and Jupiter.",
     category: "Tools",
-    link: "https://clobr.io"
+    link: "https://clobr.io",
+    twitter: "https://x.com/clobr_io"
   },
   {
     name: "Slush (💳 Arc)",
     description: "Earn, swap & explore on Sui Network with a fluid browser wallet extension.",
     category: "Wallets",
-    link: "https://slush.app/"
+    link: "https://slush.app/",
+    twitter: "https://x.com/slush_app"
   },
   {
     name: "Phoenix",
     description: "Solana’s limit order book perpetuals exchange built for extreme performance.",
     category: "Perps",
-    link: "https://phoenix.trade"
+    link: "https://phoenix.trade",
+    twitter: "https://x.com/PhoenixTrade"
   },
   {
     name: "HyperTracker",
     description: "Track Hyperliquid wallets, positions, order flow, liquidations, and cohorts.",
     category: "Tools",
-    link: "https://hypertracker.io/x"
+    link: "https://hypertracker.io/x",
+    twitter: "https://x.com/hypertracker_io"
   },
   {
     name: "The White Whale Meme Official",
     description: "The official $WhiteWhale meme community 🐋",
     category: "Meme",
-    link: "https://whitewhalememe.com"
+    link: "https://whitewhalememe.com",
+    twitter: "https://x.com/WhiteWhaleLabs"
   },
   {
     name: "Zinc",
