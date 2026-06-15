@@ -115,7 +115,8 @@ const projects = [
     name: "Zinc",
     description: "A gamified mining experience built on Solana. Play, mine, and earn ⛏️",
     category: "Mining",
-    link: "https://zinc.cash/tww"
+    link: "https://zinc.cash/tww",
+    twitter: "https://x.com/zinc_cash"
   }
 ]
 
@@ -160,21 +161,23 @@ export default function ProjectsPage() {
       {/* Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {filteredProjects.map((project, index) => (
-          <a
+          <div
             key={index}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="glass rounded-2xl p-6 hover:border-blue-500/50 hover:bg-gray-900/20 transition-all duration-300 group flex flex-col justify-between"
+            className="glass rounded-2xl p-6 hover:border-blue-500/50 hover:bg-gray-900/10 transition-all duration-300 group flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-xl font-bold group-hover:text-blue-400 transition-colors">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xl font-bold text-white hover:text-blue-400 transition-colors flex items-center gap-1.5"
+                >
                   {project.name}
-                </h3>
-                <span className="text-gray-500 group-hover:text-blue-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 text-lg">
-                  ↗
-                </span>
+                  <span className="text-gray-500 hover:text-blue-400 text-sm font-normal">
+                    ↗
+                  </span>
+                </a>
               </div>
               
               <p className="text-gray-400 text-sm mb-6 leading-relaxed">
@@ -182,12 +185,36 @@ export default function ProjectsPage() {
               </p>
             </div>
 
-            <div>
+            <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-900/40">
               <span className="inline-block px-3 py-1 bg-blue-950/40 text-blue-400 border border-blue-900/30 text-xs font-medium rounded-lg">
                 {project.category}
               </span>
+
+              <div className="flex items-center gap-2">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 bg-gray-900 hover:bg-gray-800 border border-gray-800 hover:border-gray-700 text-xs text-white rounded-lg transition-colors font-semibold"
+                >
+                  Website
+                </a>
+                {project.twitter && (
+                  <a
+                    href={project.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-1.5 bg-gray-900 hover:bg-gray-800 border border-gray-800 hover:border-gray-700 text-gray-400 hover:text-white rounded-lg transition-colors"
+                    title="Twitter / X"
+                  >
+                    <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </a>
+                )}
+              </div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
 
