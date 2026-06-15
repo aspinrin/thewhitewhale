@@ -110,10 +110,16 @@ const projects = [
     description: "The official $WhiteWhale meme community 🐋",
     category: "Meme",
     link: "https://whitewhalememe.com"
+  },
+  {
+    name: "Zinc",
+    description: "A gamified mining experience built on Solana. Play, mine, and earn ⛏️",
+    category: "Mining",
+    link: "https://zinc.cash/tww"
   }
 ]
 
-const CATEGORIES = ["All", "DeFi", "Perps", "Wallets", "Meme", "Tools"]
+const CATEGORIES = ["All", "DeFi", "Perps", "Wallets", "Meme", "Mining", "Tools"]
 
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All")
