@@ -4,18 +4,6 @@ import { useState } from 'react'
 
 const projects = [
   {
-    name: "The White Whale Meme Official",
-    description: "The official $WhiteWhale meme 🐋",
-    category: "Meme",
-    link: "https://whitewhalememe.com"
-  },
-  {
-    name: "Drift",
-    description: "The capital-efficient DeFi platform on Solana",
-    category: "Perps",
-    link: "https://app.drift.trade"
-  },
-  {
     name: "Hyperliquid",
     description: "Leading DEX Trading Platform",
     category: "Perps",
@@ -26,6 +14,19 @@ const projects = [
     description: "Building the next generation of perp exchanges",
     category: "Perps",
     link: "https://pacifica.fi"
+  },
+  {
+    name: "Zinc",
+    description: "A gamified mining experience built on Solana. Play, mine, and earn ⛏️",
+    category: "Mining",
+    link: "https://zinc.cash/tww",
+    twitter: "https://x.com/zinc_cash"
+  },
+  {
+    name: "Drift",
+    description: "The capital-efficient DeFi platform on Solana",
+    category: "Perps",
+    link: "https://app.drift.trade"
   },
   {
     name: "DefiTuna",
@@ -112,11 +113,10 @@ const projects = [
     link: "https://hypertracker.io/x"
   },
   {
-    name: "Zinc",
-    description: "A gamified mining experience built on Solana. Play, mine, and earn ⛏️",
-    category: "Mining",
-    link: "https://zinc.cash/tww",
-    twitter: "https://x.com/zinc_cash"
+    name: "The White Whale Meme Official",
+    description: "The official $WhiteWhale meme 🐋",
+    category: "Meme",
+    link: "https://whitewhalememe.com"
   }
 ]
 
