@@ -4,6 +4,13 @@ import { useState } from 'react'
 
 const projects = [
   {
+    name: "Sat Rush",
+    description: "Gamified Bitcoin Mining on Solana.",
+    category: "Mining",
+    link: "https://satrush.io",
+    twitter: "https://x.com/SatRushIO"
+  },
+  {
     name: "Hyperliquid",
     description: "Leading DEX Trading Platform",
     category: "Perps",
@@ -102,7 +109,7 @@ const projects = [
   },
   {
     name: "Phoenix",
-    description: "Solana’s on-chain perpetuals exchange. Live in private beta.",
+    description: "Solana's on-chain perpetuals exchange. Live in private beta.",
     category: "Perps",
     link: "https://phoenix.trade"
   },

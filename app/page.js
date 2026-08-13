@@ -41,12 +41,14 @@ export default function Home() {
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
             </svg>
           </a>
-          <Link
-            href="/projects"
+          <a
+            href="https://satrush.io"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center bg-gray-900/60 hover:bg-gray-800 border border-gray-800 hover:border-gray-700 text-gray-300 font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg"
           >
-            Explore Projects
-          </Link>
+            Sat Rush
+          </a>
         </div>
       </div>
 

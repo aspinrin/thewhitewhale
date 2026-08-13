@@ -11,10 +11,11 @@ export default function Navbar() {
   
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/mexc', label: 'Mexc Issue' },
+
     { href: '/projects', label: 'Projects' },
-    { href: '/prices', label: 'Live Prices' },
     { href: '/charity', label: 'Charity' },
+    { href: '/prices', label: 'Live Prices' },
+    { href: '/mexc', label: 'Mexc Issue' },
   ]
 
   const isActive = (href) => pathname === href
